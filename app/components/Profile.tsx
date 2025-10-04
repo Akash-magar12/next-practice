@@ -8,8 +8,8 @@ interface ProfileProps {
 
 const Profile = ({ profile }: ProfileProps) => {
   return (
-    <div className="font-open-sans">
-      <h1>{profile.name}</h1>
+    <div>
+      <h1 className="font-open-sans">{profile.name}</h1>
       <h2>{profile.age}</h2>
       <p>{profile.city}</p>
     </div>

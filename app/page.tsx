@@ -9,7 +9,7 @@ const Home = () => {
     city: "Dehradun",
   };
   return (
-    <main>
+    <main className="font-poppins">
       <h1 className="text-2xl font-bold">Hello Next.js + TypeScript 👋</h1>
       <p>Welcome to your first Next. js app.</p>
       <Button label="Click Me" />
