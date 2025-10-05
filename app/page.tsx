@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./components/Button";
 import Profile from "./components/Profile";
+import Imaged from "./components/Imaged";
 
 const Home = () => {
   const profile = {
@@ -14,6 +15,7 @@ const Home = () => {
       <p>Welcome to your first Next. js app.</p>
       <Button label="Click Me" />
       <Profile profile={profile} />
+      <Imaged />
     </main>
   );
 };
