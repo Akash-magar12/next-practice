@@ -11,6 +11,11 @@ const poppins = Poppins({
   weight: ["400"],
   variable: "--font-poppins",
 });
+
+export const metadata = {
+  title: "Home page",
+  description: "This is the home page of our Next.js website.",
+};
 export default function RootLayout({
   children,
 }: Readonly<{

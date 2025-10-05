@@ -1,9 +1,9 @@
 import Image from "next/image";
 import seen from "../../public/seen.jpg";
+
 const Imaged = () => {
   return (
-    <div>
-      {/* <img src="/seen.jpg" alt="" /> */}
+    <div className="">
       <Image
         src={seen}
         alt="Seen image"
@@ -12,7 +12,6 @@ const Imaged = () => {
         priority
         placeholder="blur"
         className="rounded-xl w-full h-auto"
-        blurDataURL=""
       />
     </div>
   );
