@@ -11,7 +11,7 @@ const Imaged = () => {
         height={500}
         priority
         placeholder="blur"
-        className="rounded-xl w-full h-auto"
+        className="rounded-xl w-1/2 h-auto"
       />
     </div>
   );

@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
 import { Poppins } from "next/font/google";
+import Navbar from "./components/Navbar";
 
 const open = Open_Sans({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${open.variable}  ${poppins.variable}`}>
+        <Navbar />
         {children}
       </body>
     </html>
