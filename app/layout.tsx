@@ -18,6 +18,9 @@ export const metadata = {
     default: "My Website", // Default if no page title is given
     template: "%s | My Website", // Adds " | My Website" to every page title
   },
+  icons: {
+    icon: "./globe.svg",
+  },
 };
 export default function RootLayout({
   children,

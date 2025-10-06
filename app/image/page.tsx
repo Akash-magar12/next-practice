@@ -3,6 +3,9 @@ import seen from "../../public/seen.jpg";
 export const metadata = {
   title: "Image Gallery",
   description: "Browse stunning images in our gallery section.",
+  icons: {
+    icon: "/file.svg",
+  },
 };
 const Imaged = () => {
   return (

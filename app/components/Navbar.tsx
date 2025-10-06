@@ -22,6 +22,16 @@ const Navbar: React.FC = () => {
             Image
           </Link>
         </li>
+        <li>
+          <Link href="/clientcomp" className="hover:text-blue-500">
+            Client
+          </Link>
+        </li>
+        <li>
+          <Link href="/servercomp" className="hover:text-blue-500">
+            Server
+          </Link>
+        </li>
       </ul>
     </nav>
   );
