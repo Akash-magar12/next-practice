@@ -14,8 +14,10 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Home page",
-  description: "This is the home page of our Next.js website.",
+  title: {
+    default: "My Website", // Default if no page title is given
+    template: "%s | My Website", // Adds " | My Website" to every page title
+  },
 };
 export default function RootLayout({
   children,

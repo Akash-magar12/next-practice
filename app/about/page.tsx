@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 export const metadata = {
-  title: "About Page",
-  description: "Learn more about our company on the About page.",
+  title: "About Us",
+  description: "Learn more about our team and what we do at My Website.",
 };
 const About = () => {
   return (

@@ -1,8 +1,12 @@
 import React from "react";
 import Button from "./components/Button";
 import Profile from "./components/Profile";
-import Link from "next/link";
+export const metadata = {
+  // title: "Home | My Website", // this becomes "Home | My Website"
+  title: "Home ", // this becomes "Home | My Website"
 
+  description: "Welcome to the home page of My Website built with Next.js.",
+};
 const Home = () => {
   const profile = {
     name: "Akash",
