@@ -1,5 +1,9 @@
-const Servercomp = () => {
-  return <div>Page</div>;
-};
+import React from 'react'
 
-export default Servercomp;
+const Page = () => {
+  return (
+    <div>Page</div>
+  )
+}
+
+export default Page
