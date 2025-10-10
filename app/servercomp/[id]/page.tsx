@@ -1,8 +1,7 @@
+const page = async (props) => {
+  const { id } = await props.params;
+  console.log(id);
+  return <div>{id}</div>;
+};
 
-const page = () => {
-  return (
-    <div>psge</div>
-  )
-}
-
-export default page
+export default page;
