@@ -35,6 +35,7 @@ const ServerComp = async () => {
                 alt={pokemon.name}
                 width={150}
                 height={150}
+                priority
                 className="mx-auto"
               />
               <p className="text-center mt-2 capitalize font-medium">

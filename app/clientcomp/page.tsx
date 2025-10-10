@@ -59,6 +59,7 @@ const Clientcomp = () => {
               <div className="relative">
                 <Image
                   width={500}
+                  priority
                   height={500}
                   src={image}
                   alt={pokemon.name}
