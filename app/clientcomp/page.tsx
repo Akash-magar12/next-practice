@@ -12,7 +12,6 @@ interface Pokemon {
 const Clientcomp = () => {
   const [data, setData] = useState<Pokemon[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
