@@ -135,7 +135,7 @@ const Page = () => {
               <div className="w-full bg-gray-700 rounded-full h-2">
                 <div
                   className="bg-yellow-400 h-2 rounded-full"
-                  style={{ width: `${stat.base_stat / 2}%` }}
+                  style={{ width: `${stat.base_stat }%` }}
                 ></div>
               </div>
             </div>

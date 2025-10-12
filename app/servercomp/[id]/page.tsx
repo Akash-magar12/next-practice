@@ -1,13 +1,58 @@
 import axios from "axios";
 import Image from "next/image";
 
-const Page = async (props) => {
-  const { id } = await props.params;
-  const result = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+interface PokemonAbility {
+  ability: {
+    name: string;
+  };
+}
+
+interface PokemonType {
+  type: {
+    name: string;
+  };
+}
+
+interface PokemonStat {
+  base_stat: number;
+  stat: {
+    name: string;
+  };
+}
+
+interface PokemonSprites {
+  other: {
+    ["official-artwork"]: {
+      front_default: string;
+    };
+  };
+}
+
+interface PokemonData {
+  name: string;
+  height: number;
+  weight: number;
+  abilities: PokemonAbility[];
+  types: PokemonType[];
+  stats: PokemonStat[];
+  sprites: PokemonSprites;
+}
+
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+const Page = async ({ params }: PageProps) => {
+  const { id } = params;
+  const result = await axios.get<PokemonData>(
+    `https://pokeapi.co/api/v2/pokemon/${id}`
+  );
   const pokemon = result.data;
 
   return (
-    <main className="min-h-screen  text-white flex flex-col items-center p-6">
+    <main className="min-h-screen text-white flex flex-col items-center p-6">
       {/* Pokémon Name */}
       <h1 className="text-5xl font-extrabold capitalize mb-6 text-yellow-400 drop-shadow-lg">
         {pokemon.name}
@@ -29,7 +74,7 @@ const Page = async (props) => {
       </div>
 
       {/* Basic Info */}
-      <section className=" backdrop-blur-md border border-gray-700 p-6 rounded-2xl w-full max-w-md shadow-lg mb-10">
+      <section className="backdrop-blur-md border border-gray-700 p-6 rounded-2xl w-full max-w-md shadow-lg mb-10">
         <h2 className="text-2xl font-semibold mb-4 text-center text-yellow-300">
           Basic Information
         </h2>
@@ -60,7 +105,7 @@ const Page = async (props) => {
       </section>
 
       {/* Base Stats */}
-      <section className=" mt-10 w-full max-w-md p-6 rounded-2xl border border-gray-700 shadow-lg">
+      <section className="mt-10 w-full max-w-md p-6 rounded-2xl border border-gray-700 shadow-lg">
         <h2 className="text-2xl font-semibold mb-4 text-center text-yellow-300">
           Base Stats
         </h2>
